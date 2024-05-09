@@ -4,11 +4,15 @@
 Just a simple log module that reads the YAML configuration file, nothing fancy here.
 '''
 
+#when building this up, the configuration in the yaml files asks that you
+#have a folder in the same directory as the code, named 'logs'. Make sure the 'log' files have the ending of '.log' instead of '.txt'. 
+#the system will recognize the directory and populate log messages there
+
 import yaml
 import logging
 import logging.config
 
-class console(logging.Filter):
+class console(logging.Filter): #this just controls some aspects of the log messagess as they are given to the log handlers
     def filter(self, record):
         if(record.name == '__main__'): #check to see if the log record is coming from main
             return record
