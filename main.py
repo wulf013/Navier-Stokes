@@ -6,6 +6,10 @@ import log #importing my logging module, handles some basic calls
 log.setup_logging()
 log = logging.getLogger(__name__)
 
+
+
+
+
 def main():
     print("hello")
     log.info('Navier-Stokes script running')
