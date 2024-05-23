@@ -75,12 +75,7 @@ loggers:
         handlers: [console, info_file_handler, error_file_handler, critical_file_handler, debug_file_handler, warn_file_handler]
         propagate: no
 
-    __main__.ReadPDF: 
-        level: INFO 
-        handlers: []
-        propagate: yes 
-
-    __main__.composer:
+    NavierStokes:
         level: INFO
         handlers: []
         propagate: yes
